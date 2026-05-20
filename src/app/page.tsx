@@ -133,28 +133,28 @@ export default function Home() {
                   </p>
                 </div>
 
-                <ul className="flex flex-col gap-4 border-t border-white/15 pt-5 text-[15px] lg:text-[16px] text-white leading-relaxed">
-                  <li>
-                    <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-accent text-white text-[13px] font-semibold mr-2.5 align-middle">
+                <ul className="flex flex-col gap-5 sm:gap-4 border-t border-white/15 pt-5 text-[15px] lg:text-[16px] text-white leading-relaxed">
+                  <li className="flex flex-col gap-2 sm:block">
+                    <span className="inline-flex items-center self-start px-2.5 py-1 rounded-md bg-accent text-white text-[13px] font-semibold sm:mr-2.5 sm:align-middle">
                       의사결정권자
                     </span>
-                    <span className="align-middle">
+                    <span className="sm:align-middle">
                       아이디어나 파트너십 제안이 실제 비즈니스 가치로 이어지는지 빠르게 가늠합니다.
                     </span>
                   </li>
-                  <li>
-                    <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-accent text-white text-[13px] font-semibold mr-2.5 align-middle">
+                  <li className="flex flex-col gap-2 sm:block">
+                    <span className="inline-flex items-center self-start px-2.5 py-1 rounded-md bg-accent text-white text-[13px] font-semibold sm:mr-2.5 sm:align-middle">
                       기획자
                     </span>
-                    <span className="align-middle">
+                    <span className="sm:align-middle">
                       막연한 아이디어를 사용자 흐름, 핵심 기능, 온체인 트랜잭션 구조, MVP 범위로 정리합니다.
                     </span>
                   </li>
-                  <li>
-                    <span className="inline-flex items-center px-2.5 py-1 rounded-md bg-accent text-white text-[13px] font-semibold mr-2.5 align-middle">
+                  <li className="flex flex-col gap-2 sm:block">
+                    <span className="inline-flex items-center self-start px-2.5 py-1 rounded-md bg-accent text-white text-[13px] font-semibold sm:mr-2.5 sm:align-middle">
                       개발자
                     </span>
-                    <span className="align-middle">
+                    <span className="sm:align-middle">
                       XRPL 적용 지점, 온·오프체인 역할 분리, 시스템 아키텍처, 구현 우선순위를 빠르게 파악합니다.
                     </span>
                   </li>
@@ -337,12 +337,12 @@ export default function Home() {
 
 function ModeToggle({ mode, onChange }: { mode: Mode; onChange: (m: Mode) => void }) {
   return (
-    <div className="inline-flex rounded-xl border border-white/25 bg-white/[0.04] p-1 self-start w-full sm:w-auto">
+    <div className="flex flex-col sm:inline-flex sm:flex-row rounded-xl border border-white/25 bg-white/[0.04] p-1 self-stretch sm:self-start w-full sm:w-auto gap-1 sm:gap-0">
       <button
         type="button"
         onClick={() => onChange("A")}
         className={
-          "flex-1 sm:flex-initial px-5 sm:px-7 py-2.5 rounded-lg text-[14px] font-semibold transition-all " +
+          "w-full sm:w-auto whitespace-nowrap px-5 sm:px-7 py-2.5 rounded-lg text-[14px] font-semibold transition-all " +
           (mode === "A"
             ? "bg-accent text-white border border-accent shadow-[0_0_0_1px_rgba(107,50,232,0.4)]"
             : "text-white hover:bg-white/[0.06] border border-transparent")
@@ -355,7 +355,7 @@ function ModeToggle({ mode, onChange }: { mode: Mode; onChange: (m: Mode) => voi
         type="button"
         onClick={() => onChange("B")}
         className={
-          "flex-1 sm:flex-initial px-5 sm:px-7 py-2.5 rounded-lg text-[14px] font-semibold transition-all " +
+          "w-full sm:w-auto whitespace-nowrap px-5 sm:px-7 py-2.5 rounded-lg text-[14px] font-semibold transition-all " +
           (mode === "B"
             ? "bg-accent text-white border border-accent shadow-[0_0_0_1px_rgba(107,50,232,0.4)]"
             : "text-white hover:bg-white/[0.06] border border-transparent")
