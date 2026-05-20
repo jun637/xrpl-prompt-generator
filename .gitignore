@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# project temp logs / scratch
+.dev.log
+.build.log
+.npm-install.log
+.meta-temp/
