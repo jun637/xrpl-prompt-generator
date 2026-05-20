@@ -108,7 +108,7 @@ export default function Home() {
             className="inline-block"
           >
             <Image
-              src="/logo.png"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/logo.png`}
               alt="XRPL Korea"
               width={3654}
               height={405}
