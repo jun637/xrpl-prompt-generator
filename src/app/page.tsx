@@ -220,7 +220,7 @@ export default function Home() {
                           <ChipMultiSelect
                             name={q.key}
                             options={q.options ?? []}
-                            value={(answers[q.key] as string[]) ?? []}
+                            value={toMultiValue(answers[q.key])}
                             onChange={(v) => setAnswer(q.key, v)}
                           />
                         )}
@@ -333,6 +333,12 @@ export default function Home() {
       )}
     </div>
   );
+}
+
+function toMultiValue(v: AnswerValue | undefined): string[] {
+  if (Array.isArray(v)) return v;
+  if (typeof v === "string" && v.trim()) return [v];
+  return [];
 }
 
 function ModeToggle({ mode, onChange }: { mode: Mode; onChange: (m: Mode) => void }) {
